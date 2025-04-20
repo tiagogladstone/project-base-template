@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Project Base Template (v0.1.0)
 
-First, run the development server:
+Template inicial para construir aplicações web full-stack modernas com capacidades de IA. Construído com **[Next.js](https://nextjs.org/)**, Supabase, FastAPI, Tailwind CSS e Shadcn/ui, projetado para desenvolvimento 100% em nuvem (ex: GitHub Codespaces).
+
+## Como Usar
+
+Clone este repositório e siga as instruções de configuração detalhadas em: **[<< LINK PARA SUAS NOVAS INSTRUÇÕES AQUI >>]** para configurar seu próprio projeto Supabase, chaves de API, configurações de deploy e começar a construir suas funcionalidades específicas.
+
+## Recursos Incluídos neste Template (v0.1.0)
+
+*   **Ambiente de Desenvolvimento:** Pré-configurado para GitHub Codespaces (`.devcontainer`).
+*   **Frontend (Next.js 14+ App Router):**
+    *   Configuração com TypeScript, Tailwind CSS, Shadcn/ui.
+    *   Layout de UI base, alternador de tema (light/dark) e componentes de UI comuns.
+    *   **Fluxo de Autenticação Completo** via Supabase Auth (`@supabase/ssr`): Email/Senha, Magic Link, Google OAuth, Recuperação de Senha, proteção com Middleware.
+    *   TanStack Query para gerenciamento de estado do servidor.
+    *   Página de exemplo CRUD (`/dashboard/items`) conectada ao Supabase.
+    *   Configuração com Vitest/Testing Library para testes de frontend.
+    *   Arquivos de configuração do Sentry (requer DSN do usuário).
+*   **Backend (Supabase - BaaS):**
+    *   Schema do banco de dados (via Migrations) para `profiles`, `items`, `documents` (com políticas RLS).
+    *   Extensão `pgvector` habilitada.
+*   **Backend (Python/FastAPI - Serviços de IA):**
+    *   Estrutura de API pronta para lógica de IA (RAG, CrewAI, Guardrails).
+    *   Endpoints e serviços de placeholder.
+    *   CORS pré-configurado.
+    *   Configuração com Pytest para testes de backend.
+    *   Código de integração com Sentry (requer DSN do usuário).
+*   **DevOps:**
+    *   Configuração básica para deploy na Vercel (Frontend) e Render (Backend). (Requer configuração do usuário).
+    *   Arquivos `.env.example` fornecidos para as variáveis de ambiente necessárias.
+
+## Primeiros Passos (Rodando Localmente)
+
+Após seguir as instruções de configuração (veja "Como Usar" acima) e instalar as dependências (`pnpm install`), você pode rodar o servidor de desenvolvimento do frontend:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver o resultado. Você pode começar a editar a página principal modificando `app/page.tsx`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+*(Observação: O servidor backend Python precisa ser iniciado separadamente na sua própria pasta e ambiente virtual. Consulte as instruções de configuração para mais detalhes.)*
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Aprenda Mais (Next.js)
 
-## Learn More
+Para aprender mais sobre Next.js, consulte os seguintes recursos:
 
-To learn more about Next.js, take a look at the following resources:
+-   [Documentação do Next.js](https://nextjs.org/docs) - aprenda sobre recursos e API do Next.js.
+-   [Aprenda Next.js](https://nextjs.org/learn) - um tutorial interativo de Next.js.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Você pode conferir o [repositório GitHub do Next.js](https://github.com/vercel/next.js) - feedback e contribuições são bem-vindos!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploy na Vercel
 
-## Deploy on Vercel
+A forma mais fácil de fazer o deploy do seu frontend Next.js é usando a [Plataforma Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) dos criadores do Next.js.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Consulte a [documentação de deploy do Next.js](https://nextjs.org/docs/app/building-your-application/deploying) para mais detalhes. Lembre-se de configurar suas variáveis de ambiente na Vercel conforme as instruções de configuração.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*(Observação: Lembre-se de substituir `[<< LINK PARA SUAS NOVAS INSTRUÇÕES AQUI >>]` pelo link real quando tiver as instruções prontas.)*
+```
