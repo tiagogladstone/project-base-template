@@ -1,0 +1,97 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# Python Backend)
+backend/venv/
+backend/.env*
+
+# Additional entries based on user request
+
+# Environments
+.env*.local
+.env.*.local
+
+# Node
+.pnpm-store/
+dist
+# Note: /out/ and /.next/ already exist above
+
+# Vercel
+# Note: .vercel already exists above
+
+# Logs
+logs
+*.log
+lerna-debug.log*
+# Note: other log files already exist above
+
+# IDE files
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+# Note: .DS_Store already exists above
+
+# Backend specific
+backend/__pycache__/
+backend/htmlcov/
+backend/.pytest_cache/
+backend/*.egg-info/
+backend/build/
+backend/dist/
+backend/.coverage*
+# Note: backend/venv/ and backend/.env* already exist above
+
+# Sentry
+.sentryclirc

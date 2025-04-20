@@ -1,0 +1,39 @@
+// Copie e cole para ATUALIZAR o arquivo .devcontainer/devcontainer.json (v4 - Instalação Manual Supabase):
+{
+  "name": "Next.js + Python AI Full Stack Dev",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
+  "forwardPorts": [3000, 54321, 54323, 8000],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "github.copilot",
+        "github.copilot-chat",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-azuretools.vscode-docker"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.black-formatter",
+          "editor.formatOnSave": true
+        },
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": true
+        }
+      }
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {} // Apenas feature do GitHub CLI
+  },
+  // Instala pnpm e depois baixa/instala Supabase CLI manualmente
+  "postCreateCommand": "npm install -g pnpm && curl -sSL https://github.com/supabase/cli/releases/latest/download/supabase_linux_amd64.deb -o supabase.deb && sudo apt-get update && sudo apt-get install -y ./supabase.deb && rm supabase.deb",
+  "postAttachCommand": {
+    "server": "echo 'Ambiente pronto! Rode `pnpm dev` para iniciar o Next.js e `cd backend && source venv/bin/activate && uvicorn app.main:app --reload --port 8000` para o backend Python.'"
+  }
+}
