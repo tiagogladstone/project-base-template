@@ -58,5 +58,25 @@ A forma mais fácil de fazer o deploy do seu frontend Next.js é usando a [Plata
 
 Consulte a [documentação de deploy do Next.js](https://nextjs.org/docs/app/building-your-application/deploying) para mais detalhes. Lembre-se de configurar suas variáveis de ambiente na Vercel conforme as instruções de configuração.
 
+## Estrutura do Projeto (Visão Geral)
+
+Este template segue uma estrutura organizada para aplicações full-stack:
+
+*   **`/` (Raiz):** Arquivos de configuração principal (Next.js, Tailwind, TypeScript, Vitest, Docker/Codespaces, pnpm, etc.).
+*   **`src/`:** Código fonte do frontend Next.js.
+    *   `src/app/`: Rotas e páginas principais (usando App Router).
+    *   `src/components/`: Componentes React reutilizáveis (incluindo UI da Shadcn em `src/components/ui/`).
+    *   `src/lib/`: Utilitários e lógica compartilhada (ex: clientes Supabase, provider TanStack Query).
+    *   `src/hooks/`: Hooks React customizados (ex: `useItems` para dados Supabase).
+    *   `src/types/`: Definições TypeScript (ex: tipos gerados do Supabase).
+*   **`backend/`:** Código fonte do backend Python/FastAPI.
+    *   `backend/app/`: Lógica da API FastAPI (main, routers, services, models).
+    *   `backend/tests/`: Testes Pytest para o backend.
+    *   `backend/venv/`: Ambiente virtual Python (ignorado pelo Git).
+    *   `requirements.txt`: Dependências Python.
+*   **`public/`:** Arquivos estáticos servidos diretamente (imagens, fontes, etc.).
+*   **`supabase/`:** Configuração e migrações do Supabase CLI.
+    *   `supabase/migrations/`: Arquivos SQL para versionamento do schema do banco de dados.
+
 *(Observação: Lembre-se de substituir `[<< LINK PARA SUAS NOVAS INSTRUÇÕES AQUI >>]` pelo link real quando tiver as instruções prontas.)*
 ```
