@@ -1,7 +1,7 @@
 
 # Project Base Template (v0.1.0)
 
-Template inicial para construir aplicações web full-stack modernas com capacidades de IA. Construído com **[Next.js](https://nextjs.org/)**, Supabase, FastAPI, Tailwind CSS e Shadcn/ui, projetado para desenvolvimento 100% em nuvem (ex: GitHub Codespaces).
+Template inicial para construir aplicações web full-stack modernas com capacidades de IA. Construído com **[Next.js](https://nextjs.org/)**, Supabase, FastAPI, Tailwind CSS e Shadcn/ui, projetado para desenvolvimento 100% em nuvem (ex: GitHub Codespaces) ou local usando o cursor ou similar assistido por algum outro modelo de IA generativa que vai te guiar no processo.
 
 ## Como Usar
 
@@ -77,6 +77,3 @@ Este template segue uma estrutura organizada para aplicações full-stack:
 *   **`public/`:** Arquivos estáticos servidos diretamente (imagens, fontes, etc.).
 *   **`supabase/`:** Configuração e migrações do Supabase CLI.
     *   `supabase/migrations/`: Arquivos SQL para versionamento do schema do banco de dados.
-
-*(Observação: Lembre-se de substituir `[<< LINK PARA SUAS NOVAS INSTRUÇÕES AQUI >>]` pelo link real quando tiver as instruções prontas.)*
-```
